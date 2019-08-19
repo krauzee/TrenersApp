@@ -6,6 +6,7 @@ import com.krauzze.trenersapp.presentation.ui.main.MainFragment
 import com.krauzze.trenersapp.presentation.ui.main.MainModule
 import com.krauzze.trenersapp.presentation.ui.main.MainScope
 import com.krauzze.trenersapp.presentation.ui.main.find.FindFragment
+import com.krauzze.trenersapp.presentation.ui.main.find.FindModule
 import com.krauzze.trenersapp.presentation.ui.main.home.HomeFragment
 import com.krauzze.trenersapp.presentation.ui.main.notif.NotifFragment
 import com.krauzze.trenersapp.presentation.ui.main.profile.ProfileFragment
@@ -27,7 +28,7 @@ abstract class RootFragmentBuilder {
     @MainScope
     abstract fun provideHomeFragment(): HomeFragment
 
-    @ContributesAndroidInjector()
+    @ContributesAndroidInjector(modules = [FindModule::class])
     @MainScope
     abstract fun provideFindFragment(): FindFragment
 
