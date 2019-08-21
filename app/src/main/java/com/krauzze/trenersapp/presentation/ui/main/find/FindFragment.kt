@@ -5,7 +5,9 @@ import android.support.v7.widget.LinearLayoutManager
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.krauzze.trenersapp.R
+import com.krauzze.trenersapp.domain.entity.TrenerEntity
 import com.krauzze.trenersapp.presentation.base.DiMoxyFragment
+import com.krauzze.trenersapp.presentation.models.TrenerModel
 import kotlinx.android.synthetic.main.fragment_find.*
 import javax.inject.Inject
 import javax.inject.Provider
@@ -42,5 +44,9 @@ class FindFragment: DiMoxyFragment(), FindView {
 
         treners_list.adapter = trenersListAdapter
         treners_list.layoutManager = LinearLayoutManager(context)
+    }
+
+    override fun setTreners(treners: List<TrenerModel>) {
+
     }
 }

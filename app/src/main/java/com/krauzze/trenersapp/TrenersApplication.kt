@@ -13,7 +13,6 @@ class TrenersApplication : DaggerApplication() {
 
     }
 
-
     override fun onCreate() {
         super.onCreate()
         MultiDex.install(this)
